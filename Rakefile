@@ -7,13 +7,8 @@ def root
 end
 
 class Renderer
-  def initialize
-    renderer = Redcarpet::Render::HTML.new
-    @markdown = Redcarpet::Markdown.new(renderer, extensions = {})
-  end
-
   def render(content)
-    @markdown.render(content)
+    Kramdown::Document.new(content).to_html
   end
 end
 
@@ -26,9 +21,6 @@ class Part
     @path = path
     @renderer = Renderer.new
     @content = File.read @path
-    @content.gsub! /\$([^\$]+)\$/ do |group|
-      "$#{Regexp.last_match[1].gsub("_", '\_')}$"
-    end
   end
 
   def render
@@ -56,7 +48,6 @@ class Document
     FileUtils.mkdir_p "#{root}/output"
     File.write path, render
     File.write(File.dirname(path) + "/styles.css", styles)
-    File.write(File.dirname(path) + "/mathjax.js", File.read("mathjax.js"))
   end
 
   def styles
@@ -82,7 +73,7 @@ end
 
 desc "compiles the project and outputs a pdf"
 task pdf: :compile do
-  `cd output && prince thesis.html`
+  `cd output && prince thesis.html --javascript`
   `open output/thesis.pdf`
 end
 
