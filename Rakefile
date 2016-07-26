@@ -76,4 +76,10 @@ task :compile do
   Document.new(root).save(output)
 end
 
+desc "compiles the project and outputs a pdf"
+task pdf: :compile do
+  `cd output && prince thesis.html`
+  `open output/thesis.pdf`
+end
+
 task default: [:compile]

@@ -10,7 +10,6 @@ GEM
     i18n (0.7.0)
     json (1.8.3)
     minitest (5.8.4)
-    nyaplot (0.1.6)
     rake (10.4.2)
     redcarpet (3.3.4)
     sass (3.4.22)
@@ -23,10 +22,12 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport (~> 4.2.6)
-  nyaplot (~> 0.1.5)
   rake
   redcarpet (~> 3.3.4)
   sass (~> 3.4.21)
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.12.0
