@@ -20,6 +20,12 @@ To get the electric field of any given system at a specific time this algorithm 
 
 To account for different materials within the system, $\mu$ can be replaced by a location or even time dependent $\mu(t, x)$.
 
-To visualize the different points in time and space,
+To visualize the different points that are calculated during the process for three dimentions there's the so called _Yee Cell_ that is formed by taking the points for $q=0,\frac{1}{2},1$ all dimentions:
 
-[Yee]: http://adsabs.harvard.edu/abs/1966ITAP...14..302Y (Numerical solution of inital boundary value problems involving maxwell's equations in isotropic media)
+![Yell Cell](yeecell.jpg)
+
+Each part of the vector $\mathbf{E}$ and $\mathbf{H}$ can be calculated independently to get the overall electric field of the system.
+
+[Yee]: http://adsabs.harvard.edu/abs/1966ITAP...14..302Y (Numerical solution of initial boundary value problems involving maxwell's equations in isotropic media)
+
+__Add here: Fourier Transform, which frequency?__
