@@ -1,1 +1,17 @@
 ### Raman Spectroscopy
+
+The inelastic scattering of light is referred to as Raman scattering. When photons exchange
+energy with the material during a scattering process they can either lose energy (Stokes radiation)
+or gain additional energy (anti-Stokes radiation). This energy in the material is vibrational and / or
+rotational energy, also known as phonons. The process of transferring energy can also be described as
+the inelastic collision of a photon with a phonon.
+
+By gaining or losing energy the photon changes changes it's frequency. This shift in the photon's
+frequency is referred to as the Raman shift or Raman frequency. The Stokes shifted frequency is
+
+$$\omega_S=\omega_i-\omega_0$$
+
+with $\omega_i$ being the frequency of the incoming light and $\omega_0$ as the Raman frequency.
+The anti-Stokes shifted frequency is shifted by the same amount $\omega_0$ as
+
+$$\omega_{AS}=\omega_i+\omega_0.$$
