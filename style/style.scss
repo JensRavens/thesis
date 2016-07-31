@@ -1,9 +1,16 @@
+@media print {
+    @page {
+      margin: 3cm;
+    }
+}
+
 body, html {
   margin: 0;
   padding: 0;
 
   font-family: "Open Sans";
-  font-size: 14px;
+  font-size: 14pt;
+  line-height: 1.4;
 }
 
 .container {
