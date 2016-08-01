@@ -13,6 +13,44 @@ body, html {
   line-height: 1.4;
 }
 
+em {
+  display: block;
+  margin: 0 2cm;
+  text-align: center;
+}
+
+strong {
+  display: block;
+  background-color: rgba(orange, 0.5);
+  margin: 0;
+  padding: 3mm 1cm;
+  font-weight: normal;
+}
+
+blockquote {
+  display: flex;
+
+  > p {
+    flex: 1;
+  }
+
+  p + p {
+    margin-left: 5mm;
+  }
+
+  img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  em {
+    margin: 0;
+  }
+}
+
 .container {
   max-width: 850px;
   margin: 0 auto;
