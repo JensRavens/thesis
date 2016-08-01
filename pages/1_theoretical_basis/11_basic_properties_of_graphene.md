@@ -15,10 +15,10 @@ Graphene is a two dimensional allotrope of carbon where atoms are densely packed
 >![](../images/k-cell.png)
 >_The reciprocal lattice points to the hexagonal grid of the two atom base grid. The unit cell is shaded in gray, $\Gamma$ is the cell's center; $K\_+$, $K\_-$ and $M$ are highly symmetric points (adapted from [2])._
 
-![http://www.andrew.cmu.edu/user/feenstra/graphene/](http://www.andrew.cmu.edu/user/feenstra/graphene/grapheneSmall.jpg)
+![http://www.andrew.cmu.edu/user/feenstra/graphene/](../images/orbitals.jpg)
 _Valence orbitals of carbon atoms in graphene. Covalent bonded atoms are formed from $\sigma$-orbitals while the perpendicular $\pi$-orbitals create the valence and conduction band. Adapted from [orbitals]._
 
-The $\pi$ orbitals hybridize and form a continuous cloud of electrons above and below the graphene lattice enabling ballistic transport of electrons and its high conductivity.
+The $\pi$ orbitals hybridize and form a continuous cloud of electrons above and below the graphene lattice enabling ballistic transport of electrons and its high carrier mobility.
 
 #### Band Structure and Band Gap
 
