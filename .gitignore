@@ -36,3 +36,11 @@ build/
 .rvmrc
 .DS_STORE
 /output
+/pages/_all.tex
+/.byebug_history
+/thesis.pdf
+/thesis.log
+/thesis.blg
+/thesis.bbl
+/thesis.aux
+/thesis.toc
