@@ -21,6 +21,9 @@ end
 desc "compiles the files to finished html"
 task compile: [:update] do
   `pdflatex thesis.tex`
+  `bibtex thesis`
+  `pdflatex thesis.tex`
+  `pdflatex thesis.tex`
 end
 
 task default: [:compile]
