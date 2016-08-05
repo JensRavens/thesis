@@ -1,9 +1,11 @@
 # Bachelor Thesis
 
-## Installation
-Install a recent gcc (required by nmatrix)
+
+## Notes
+
+Creating the image listings:
 
 ```bash
-brew tap homebrew/versions
-brew install gcc48
+mogrify -trim chart*.png
+convert chart*.png -append result.png
 ```
