@@ -22,6 +22,14 @@ To save time during the FDTD simulation the mirror symmetry along the $x$ and $y
 
 The grid size within the simulated area is set to a uniform equidistant grid with a mesh size of \SI{0.5}{nm} between the simulated points in $x$, $y$ and $z$ direction. The total simulated area on the bottom left is a square of \SI{200}{nm}, leading to a total calculateable square of \SI{400}{nm} after mirroring the simulated results.
 
+The simulated light pulse is a femto second pulse with a wavelength of $\lambda=\SI{638}{nm}$, matching the resonance of the plasmonic antennas \cite{heet}.
+
 Simulating the described system takes about 8 hours on the used machine and leads to a file size of \SI{1.24}{GB} simulated data per simulation. This simulation is done for both \SI{2}{nm} and \SI{5}{nm} corner radius. Unless otherwise noted the following sections will use data from the \SI{2}{nm} simulation.
 
 To continue with calculations the simulated data is exported to matlab, including the three dimensional electric field (as complex values) and the three axes.
+
+\begin{figure}[!h]
+  \includegraphics[width=\textwidth]{./images/simulation-slices.png}
+  \label{slices}
+  \caption{Slices of the simulation's result in the $x,y$-plane as near field enhancement $|E/E_0|^2$. Starting at the top left at $z=\SI{0}{nm}$ continuing in \SI{5}{nm} steps until $z=\SI{80}{nm}$.}
+\end{figure}

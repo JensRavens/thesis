@@ -1,4 +1,4 @@
-Next a slice at $z=\SI{40}{nm}$ is compared to the original simulation by \cite{heeg} in figure \ref{slice-comparision}.
+Next a slice at $z=\SI{40}{nm}$ is compared to the original simulation by \cite{heeg} in figure \ref{slice-comparision}. The overal local enhancement of the simulation reproduces the original simulation. The biggest difference is noticeable right at the outer edges of the nanostructure: Compared to the original simulation the enhancement is slightly bigger.
 
 \begin{figure}[!h]
   \centering
@@ -14,7 +14,7 @@ Next a slice at $z=\SI{40}{nm}$ is compared to the original simulation by \cite{
   \caption{\textbf{(a)} Near field enhancement $|E/E_0|^2$ in the $x,y$-plane at $z=\SI{40}{nm}$. \textbf{(b)} Original results by \cite{heeg}.}
 \end{figure}
 
-\note{compare lumerical simulation with original heeg results: simulation gives same results as original paper. same shape, same values in most areas. slight changes directly next to the nano structure.}
+This difference is also noticeable by plotting a the near field enhancement in the $x,z$ plane at $y=0$ in figure \ref{yline}.
 
 \begin{figure}[!h]
   \centering
@@ -25,10 +25,10 @@ Next a slice at $z=\SI{40}{nm}$ is compared to the original simulation by \cite{
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{./images/heeg-y-line.png}
   \end{subfigure}
+  \label{yline}
   \caption{\textbf{(a)} Near field enhancement $|E/E_0|^2$ in the $x,z$-plane at $y=0$. \textbf{(b)} Original results by \cite{heeg}.}
 \end{figure}
 
-\note{same shape of the graph in the cavity, same minimum and maximum of 100/50. higher values on the outer corners of nano structure, maybe due to corner radius. grey area contains 90\% of enhancement according to heeg.}
+The graph has approximately the same shape and values within the cavity, with a maximum enhancement of $100$ at the edges of the cavity and a minimum enhancement of $50$ within the cavity. The biggest difference again is visible at the outer edges of the gold nanostructure.
 
-\newpage
-\null
+These differences can be explained with the different corner radiuses where sharper edges lead to a higher enhancement. But because the outer enhancement can neglected compared to the enhancement within the cavity according to \cite{heeg} the results of the simulation will be assumed as matching the original paper's simulation.

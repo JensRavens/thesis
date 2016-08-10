@@ -1,12 +1,6 @@
 \subsection{Comparing the simulated system to the original data}
 
-To create reusable algorithms for the simulated data, the concept of a slice is introduced. A slice is a two dimensional datastructure holding the value of the enhancement using $x$ and $y$ coordinates. These coordinates reflect the $x$ and $y$ coordinates of the overal simulation but don't have to be a plane in the $z$ plane. Instead slices can be any geometric structures representable as $z=f(x,y)$.
-
-\begin{figure}[!h]
-  \includegraphics[width=\textwidth]{./images/simulation-slices.png}
-  \label{slices}
-  \caption{Slices of the simulation's result in the $x,y$-plane as near field enhancement $|E/E_0|^2$. Starting at the top left at $z=\SI{0}{nm}$ continuing in \SI{5}{nm} steps until $z=\SI{80}{nm}$.}
-\end{figure}
+To create reusable algorithms for the simulated data, the concept of a slice is introduced. A slice is a two dimensional datastructure holding the value of the enhancement using $x$ and $y$ coordinates. These coordinates reflect the $x$ and $y$ coordinates of the overal simulation but don't have to be a plane in the $z$ plane. Instead slices can be any geometric structures representable as $z=f(x,y)$. The local enhancement inside slices is only accounting for an electric field $\mathbf{E}$ that is parallel to the slice surface. For slices along the $z$-axis this means discarding the $z$-component of the field, for more complex surfaces the field has to be projected to that surface for every value.
 
 In figure \ref{slices} there are the plotted versions of slices using equidistant planes along the $z$-axis to give an overview over the enhancement at different values of $z$. Noticeable are the fragments of spatial discretisation along the rounded gold structures.
 
