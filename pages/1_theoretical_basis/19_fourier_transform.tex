@@ -1,12 +1,12 @@
-\subsubsection{Snapshots and Transforms to a Frequency Domain}
+\subsubsection{Snapshots and Transformations to a Frequency Domain}
 
-While it is often useful to know the exact state of the system at any time step $q$, this actually leads to a few problems in practical implementations:
+While it is often useful to know the exact state of the system at any time step $q$, this actually leads to problems in practical implementations:
 
 \begin{description}
-  \item[Memory Consumption] Assuming that each value is a complex value with double precision leads to a space consumption of $2\cdot64$bit = $128$bit or $16$byte for every single point of $\mathbf{E}$ and $\mathbf{H}$. A cubic system with a side length of $200nm$ and a grid size of $0.5nm$ already has 64 million points which corresponds to about $976$mb of memory consumption just for the $\mathbf{E}$ field for a single point in time.
-  \item[Mixed $\mathbf{E}$ and $\mathbf{H}$ Fields] If the discretisation $\Delta_t$ is not corresponding to the frequency of the propagation of the electromagnetic wave there will be a mixture of $\mathbf{E}$ and $\mathbf{H}$ at any given timestep $q$ which is undesired in most cases because only the $\mathbf{E}$ field might be of interest.
+  \item[Memory Consumption] Assuming that each value is a complex value with double precision leads to a space consumption of $2\cdot\SI{64}{bit}$ = \SI{128}{bit} or \SI{16}{byte} for every single point of $\mathbf{E}$ and $\mathbf{H}$. A cubic system with a side length of \SI{200}{nm} and a grid size of \SI{0.5}{nm} already has 64 million points which corresponds to about \SI{976}{mb} of memory consumption just for the $\mathbf{E}$ field for a single point in time.
+  \item[Mixed $\mathbf{E}$ and $\mathbf{H}$ Fields] If the discretisation $\Delta_t$ is not corresponding to the period of the electromagnetic wave there will be a mixture of $\mathbf{E}$ and $\mathbf{H}$ at any given timestep $q$ which is undesired in most cases because only the $\mathbf{E}$ field might be of interest. The same problem arises for the spatial propagation of the wave.
 \end{description}
 
-To solve these problems most implementations of FDTD transform the electric field $\mathbf{E}(\mathbf{x},t)$ with a fourier transform to $\mathbf{E}(\mathbf{x}, \nu)$ with $\nu$ being the frequency of the electric field. In case only a specific frequency $\nu$ is of interest all other values can already be discarded while the simulation is running which is greatly reducing the memory needed to perform a calculation.
+To solve these problems most implementations of FDTD transform the electric field $\mathbf{E}(\mathbf{x},t)$ with a Fourier transform to $\mathbf{E}(\mathbf{x}, \nu)$ with $\nu$ being the frequency of the electric field. In case only a specific frequency $\nu$ is of interest all other values can already be discarded while the simulation is running which is greatly reducing the memory needed to perform a calculation.
 
 This also solves the problem of mixed fields: Over many time steps $q$ the calculated $\mathbf{E}$ values will average out the error that would be present by just using a single iteration.

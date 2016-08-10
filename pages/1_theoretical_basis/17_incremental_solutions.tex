@@ -21,13 +21,11 @@ Dividing by $\delta$ and rearranging gives
   \left.\frac{df(x)}{dx}\right|_{x=x_0} = \frac{f(x_0+\frac{\delta}{2})-f(x_0-\frac{\delta}{2})}{\delta} + O(\delta^2),
 \end{equation}
 
-where $O(\delta^2)$ stands for higher order $\delta$ terms which can be neglected for small $\delta$.
+where $O(\delta^2)$ stands for higher order $\delta$ terms which can be neglected for small $\delta$. Assuming the electric field only has a $z$-component, Maxwell's equations give
 
-Assuming the electric field only has a $z$-component, Maxwell's equations give
-
-\begin{equation}
-  -\mu\frac{\partial\mathbf{H}}{\partial t}=\nabla\times\mathbf{E} \Rightarrow \mu\frac{\partial H_y}{\partial t} = \frac{\partial E_z}{\partial x},\\ \label{maxwell}
-  \epsilon\frac{\partial\mathbf{E}}{\partial t}=\nabla\times\mathbf{H} \Rightarrow \epsilon\frac{\partial E_z}{\partial t} = \frac{\partial H_y}{\partial x},
-\end{equation}
+\begin{align}
+  -\mu\frac{\partial\mathbf{H}}{\partial t}&=\nabla\times\mathbf{E} \quad\Rightarrow\quad \mu\frac{\partial H_y}{\partial t} = \frac{\partial E_z}{\partial x},\\ \label{eq:maxwell}
+  \epsilon\frac{\partial\mathbf{E}}{\partial t}&=\nabla\times\mathbf{H} \quad\Rightarrow\quad \epsilon\frac{\partial E_z}{\partial t} = \frac{\partial H_y}{\partial x},
+\end{align}
 
 with the electric field $\mathbf{E}$, the magnetic field $\mathbf{H}$, permittivity $\epsilon$ and permeability $\mu$.

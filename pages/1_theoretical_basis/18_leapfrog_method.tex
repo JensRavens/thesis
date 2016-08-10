@@ -1,8 +1,8 @@
 \subsubsection{Yee Cell and Leapfrog Method}
 
-According to \cite{yee} Eq. \ref{maxwell} is discretized with $t=q\Delta_t$ and $x=m\Delta_x$ where $q,m\in\left\{\dots,-1,-\frac{1}{2},0,\frac{1}{2},1,\dots\right\}$ and $\Delta_x, \Delta_t$ being the division of our space and time grid.
+According to \cite{yee} Eq.~\ref{eq:maxwell} is discretized with $t=q\Delta_t$ and $x=m\Delta_x$ where $q,m\in\left\{\dots,-1,-\frac{1}{2},0,\frac{1}{2},1,\dots\right\}$ and $\Delta_x, \Delta_t$ being the division of our space and time grid.
 
-Taking the equation \ref{maxwell} and using the time steps $q+\frac{1}{2}$ and $q-\frac{1}{2}$ and the partition steps $m+1$ and $m$ this gives
+Taking the equation~\ref{eq:maxwell} and using the time steps $q+\frac{1}{2}$ and $q-\frac{1}{2}$ and the partition steps $m+1$ and $m$ this gives
 
 \begin{equation}
   \mu\frac{H_y\left[\left(q+\frac{1}{2}\right)\Delta_t, (m+\frac{1}{2})\Delta_x\right]-H_y\left[\left(q-\frac{1}{2}\right)\Delta_t, (m+\frac{1}{2})\Delta_x\right]}{\Delta_t}=\frac{E_z\left[q\Delta_t, (m+1)\Delta_x)-E_z(q\Delta_t, m\Delta_x)\right]}{\Delta_x}.
@@ -17,15 +17,16 @@ Solving for future $H_y$ yields
 
 This means the value of the magnetic field at a given point $m$ can be calculated from it's last value and the surrounding electric fields at a prior time. The difference between $H_y((q+\frac{1}{2})\Delta_t)$ and $H_y((q-\frac{1}{2})\Delta_t)$ is called the update function.
 
-Likewise this calculations can be done for $E_z$ to get an update function to calculate the next value of $E_z$ from it's old value and the surrounding two $H_y$ values.
+Likewise these calculations can be done for $E_z$ to get an update function to calculate the next value of $E_z$ from it's old value and the surrounding two $H_y$ values.
 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.5\textwidth]{./images/space-time-cell.png}
   \caption{Each point in time for $\mathbf{E}$ can be calculated by the former value at the same position in space one step before and the surrounding values of $\mathbf{H}$ half a timestep before. Following this algorithm this diagram is built from bottom to top line by line which is the reason this method is called leapfrog method.}
+  \label{fig:leapfrog}
 \end{figure}
 
-To get the electric field of any given system at a specific time this algorithm just calculates $E_z$ and $H_y$ with $q$ starting at 0 and increasing by $\frac{1}{2}$ until the required time $t = q\Delta_t$ is reached. The only needed input is the initial field of $E_z$ at $q = 0$. Because this method by turns calculates $E$ and $H$ it is also called a leap frog method.
+To get the electric field of any given system at a specific time this algorithm just calculates $E_z$ and $H_y$ with $q$ starting at 0 and increasing by $\frac{1}{2}$ until the required time $t = q\Delta_t$ is reached as in figure~\ref{fig:leapfrog}. The only needed input is the initial field of $E_z$ at $q = 0$. Because this method calculates $E$ and $H$ in turns it is also called the "leap frog method".
 
 To account for different materials within the system, $\mu$ can be replaced by a location or even time dependent $\mu(t, x)$.
 
