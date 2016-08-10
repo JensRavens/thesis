@@ -10,7 +10,7 @@ Graphene is a two dimensional hexagonal atomic structure (also called honeycomb 
   \label{fig:spm}
 \end{figure}
 
-Graphene is a two dimensional allotrope of carbon where atoms are densely packed in a hexagonal pattern with a distance of about \SI{1.42}{\angstrom} as shown in figure~\ref{fig:spm}. Each sp$^2$-hybridized carbon atom has a covalent $\sigma$-bond to three other carbon atoms.
+Graphene is a two dimensional allotrope of carbon where atoms are densely packed in a hexagonal pattern with a distance of about \SI{1.42}{\angstrom} as shown in figure~\ref{fig:spm}. Each sp$^2$-hybridized carbon atom has a covalent $\sigma$-bond to three other carbon atoms formed from three of the valence electrons while the 4th valence electron does not participate in the covalent bonding but forms a conduction $\pi$-band.
 
 \begin{figure}[!h]
   \centering
@@ -25,16 +25,20 @@ Graphene is a two dimensional allotrope of carbon where atoms are densely packed
   \label{fig:lattice}
 \end{figure}
 
+As seen in figure~\ref{fig:lattice} graphene's lattice consists of a two-atom triangular Bravais lattice which is spanned by the two basis vectors $\mathbf{a}_1$ and $\mathbf{a}_2$. For solid state physics it is often interesting to look at the transformed grid in $k$-space. Graphene's reciprocal lattice is also hexagonal with a hexagonal unit cell with $\Gamma$ as its center. Other symmetric points are $K_+$ and $K_-$ at the corners of the first Brillouin zone. In addition to them there is the $M$ point describing the center between $K_+$ and $K_-$.
+
+\newpage
+
+\subsubsection{Electronic Properties}
+
+Most of graphene's special electronic properties are caused by the fourth valence electron which causes the $\pi$ orbitals to hybridize and form a delocalized electron cloud above and below the graphene lattice enabling ballistic transport of electrons\mcite and a high carrier mobility\mcite. These orbitals can be seen in figure~\ref{fig:orbitals}.
+
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.3\textwidth]{./images/orbitals.jpg}
   \caption{Valence orbitals of carbon atoms in graphene. Covalent bonded atoms are formed from $\sigma$-orbitals while the perpendicular $\pi$-orbitals create the valence and conduction band. Adapted from http://www.andrew.cmu.edu/user/feenstra/graphene/\mcite.}
   \label{fig:orbitals}
 \end{figure}
-
-\subsubsection{Electronic Properties}
-
-The $\pi$ orbitals hybridize and form a delocalized electron cloud above and below the graphene lattice enabling ballistic transport of electrons and a high carrier mobility\mcite.
 
 Due to the symmetry of the system the $\pi$ orbitals can be treated independently as the main contributor to the conduction and valence band. The band structure can be calculated with a tight-binding model as\mcite
 
@@ -44,6 +48,8 @@ Due to the symmetry of the system the $\pi$ orbitals can be treated independentl
 \end{equation}
 
 with the hopping energy $\gamma_0\approx\SI{2.8}{eV}$, the lattice constant $a\approx\SI{2.46}{Å}$, "$+$" for the conduction band and "$-$" for the valence band.
+
+Plotting this relation leads to figure~\ref{fig:bands} which shows that valence and conduction band touch in the $K$-points. Looking a bit closer at the band structure near the $K$ points in figure~\ref{fig:bands} allows to use a linear approximation of the valence and conduction band. Both bands touch in a single point at the intersection.
 
 \begin{figure}[!h]
   \centering
@@ -56,7 +62,8 @@ with the hopping energy $\gamma_0\approx\SI{2.8}{eV}$, the lattice constant $a\a
     \caption{}
     \includegraphics[width=\textwidth]{./images/dispersion.png}
   \end{subfigure}
-  \caption { (a): Conduction and valence band touch in the points $K\_-$ and $K\_+$. (b): At the K points the conduction and valance bands can be linearly approximated. }
+  \caption { (a): Conduction and valence band touch in the points $K\_-$ and $K\_+$.\mcite (b): At the K points the conduction and valance bands can be linearly approximated.\mcite }
+  \label{fig:bands}
 \end{figure}
 
 Evaluating equation~(\ref{eq:dispersion}) at the K points gives

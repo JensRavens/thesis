@@ -18,17 +18,18 @@ Now that the position of graphene for every point in the $x,y$-plane is known th
          y_projection = cos(atan((height_next_y - height) / grid_size));
          z_projection = 1 - cos(atan((height_next_y - height) / grid_size));
          data(x_loop, y_loop) = sliceX .* conj(sliceX) * x_projection +
-            sliceY .* conj(sliceY) * y_projection + sliceZ .* conj(sliceZ) * z_projection;
+            sliceY .* conj(sliceY) * y_projection +
+            sliceZ .* conj(sliceZ) * z_projection;
      end
   end
   graphene_slice = slice(data, obj.x, obj.y);
 \end{minted}
 
-The returned slice now is just a regular slice which can be plotted as seen in figure \ref{projected}.
+The returned slice now is just a regular slice which can be plotted as seen in figure \ref{fig:projected}.
 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=\textwidth]{./images/graphene-layer.png}
-  \label{projected}
+  \label{fig:projected}
   \caption{Near field enhancement $|E/E_0|^2$ in the layer of graphene after applying the height map.}
 \end{figure}
