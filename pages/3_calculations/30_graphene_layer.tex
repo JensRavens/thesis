@@ -9,21 +9,20 @@ Placed over the nanostructure described in figure \ref{fig:lumerical} there is a
   \centering
   \begin{subfigure}{0.6\textwidth}
     \includegraphics[width=\textwidth]{./images/blender.png}
-    \label{fig:blender}
   \end{subfigure}
   ~
   \begin{subfigure}{0.35\textwidth}
     \includegraphics[width=\textwidth]{./images/map.png}
-    \label{fig:heightmap}
   \end{subfigure}
   \caption{\textbf{(a)} Cloth simulation in Blender 2.7. An elastic material is dropped on 2 cylinders with a radius of \SI{50}{nm}. \textbf{(b)} A generated heightmap after rendering. Black corresponds to 0, white to maximum height.}
+  \label{fig:blender}
 \end{figure}
 
 Using the 3D modelling software Blender 2.7 a simulation of cloth falling on 2 cylinders is used as a basis for the location of the graphene layer. As visible in figure \ref{fig:blender} two cylinders of \SI{45}{nm} height and \SI{50}{nm} radius (gold nanostructures plus chrome interlayer) are placed on an infinite plane. Next up a 1nm thick plane is placed on top and cloth simulation is enabled for this layer.
 
 After the simulation has finished with the cloth like material the results are compared to figure 1c of \cite{heeg}. This is repeated with tweeked properties of the material until the simulated 3D model matches estimated position of the graphene layer. Because no material caused the layer to be sucked into the cavity the manual sculpturing tool is used to move the layer down into the cavity. The resulting 3D model is shown in figure \ref{fig:blender}.
 
-To import the simulated structure into Matlab for further calculations an intermediate step is used. A camera in the scene is setup to point down at the structure with a special light source that illuminates the simulated layer according to it's $z$ value. The highest value is represented as white while black represents the base plane. All other values are projected linearly in the gray colorspace, effectively creating the heightmap shown in \ref{fig:heightmap}.
+To import the simulated structure into Matlab for further calculations an intermediate step is used. A camera in the scene is setup to point down at the structure with a special light source that illuminates the simulated layer according to it's $z$ value. The highest value is represented as white while black represents the base plane. All other values are projected linearly in the gray colorspace, effectively creating the heightmap shown in \ref{fig:blender}.
 
 This heightmap can now be imported as a two dimensional matrix of height values:
 \begin{minted}{matlab}

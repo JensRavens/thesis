@@ -2,14 +2,14 @@
 \section{Setup and Simulation}
 \subsection{Simulation using lumerical FDTD}
 
-The following simulation and calculation is aimed to reproduce the results of \cite{heeg} and is supposed to have a more detailed look at the estimation about percentage of near field enhancement contributing to the total measured enhancement. To improve this estimation there will be a simulated graphene surface to calculate the actual enhancement along the graphene layer compared to the rough estimation of the blue dashed area in figure \ref{fig:heeg-result}.
+The following simulation and calculation is aimed to reproduce the results of \cite{heeg} and is supposed to have a more detailed look at the estimation about percentage of near field enhancement contributing to the total measured enhancement. To improve this estimation there will be a simulated graphene surface to calculate the actual enhancement along the graphene layer compared to the rough estimation of the blue dashed area in figure \ref{fig:slice-comparision}.
 
-lumerical FDTD is a commercial software to simulate systems using the FDTD method. Using this software the experimental setup of \cite{heeg} should be built inside the software to simulate the electromagnetic field within the gold nano structure. The result of this simulation will be the enhancement of the electric field $frac{\mathbf{E}(\mathbf(r))}{E_0}$ in three dimensional space. Compared to \cite{heeg} this will give a more detailed look at the spatial electromagnetic field than just a slice at $z=40nm$ and allows at a later stage to calculate the enhancement along the graphene layer.
+lumerical FDTD is a commercial software to simulate systems using the FDTD method. Using this software the experimental setup of \cite{heeg} should be built inside the software to simulate the electromagnetic field within the gold nano structure. The result of this simulation will be the enhancement of the electric field $\mathbf{E}(\mathbf{r})/E_0$ in three dimensional space. Compared to \cite{heeg} this will give a more detailed look at the spatial electromagnetic field than just a slice at $z=40nm$ and allows at a later stage to calculate the enhancement along the graphene layer.
 
 \begin{figure}[!h]
   \includegraphics[width=\textwidth]{./images/lumerical.png}
-  \label{fig:lumerical}
   \caption{The experimental setup of \cite{heeg} simulated in lumerical FDTD. Two gold discs with a radius of \SI{50}{nm} are placed \SI{30}{nm} apart on SiO$_2$ on a \SI{5}{nm} Cr interlayer. The upper corners of the gold discs are rounded with a radius of \SI{2}{nm}. The simulation observes an area of $\SI{400}{nm}\times\SI{400}{nm}$ with a grid size of \SI{0.5}{nm}. To improve simulation time and memory consumption, only the lower left quarter is calculated and reproduced to the other quarters by using the mirror symmetry of the system.}
+  \label{fig:lumerical}
 \end{figure}
 
 lumerical allows to setup different materials in 3D space using basic geometric shapes like cubes, cylinders and spheres. The base material of this experiment is a carrier layer of SiO$_2$. On this layer there are two gold nano discs of \SI{50}{nm} radius and \SI{40}{nm} height. These two discs are placed \SI{30}{nm} apart on the surface using a \SI{5}{nm} layer of Cr. The setup is done via direct entry of positions and sizes of the geometric shapes to replicate the values of Figure 1c of \cite{heeg}.
@@ -30,6 +30,6 @@ To continue with calculations the simulated data is exported to matlab, includin
 
 \begin{figure}[!h]
   \includegraphics[width=\textwidth]{./images/simulation-slices.png}
-  \label{fig:slices}
   \caption{Slices of the simulation's result in the $x,y$-plane as near field enhancement $|E/E_0|^2$. Starting at the top left at $z=\SI{0}{nm}$ continuing in \SI{5}{nm} steps until $z=\SI{80}{nm}$.}
+  \label{fig:slices}
 \end{figure}
