@@ -1,10 +1,12 @@
 \newpage
-\section{Conclusion and Outlook}
+\section{Discussion and Concolusion}
 
-This work described the simulation of an experiment conducted in \cite{heeg}. Graphene was used as a Raman active material in surface enhanced Raman spectroscopy on a gold nanostructure. Because the laser's width is way bigger than the cavity the calculations for the cavity cannot directly be compared to the experimental results.
+This work described the simulation of an experiment conducted in ref.~\cite{heeg}. Graphene was used as a Raman active material for surface-enhanced Raman spectroscopy with a gold nanodimer as a plasmonic nanostructure. Because the laser spot size is much bigger than the area of the dimer cavity, the calculated local enhancement cannot be directly compared to the experimental enhancement.
 
-It was shown that by using a more accurate method of measuring the enhancement along the graphene layer the results only slightly differ from the paper's assumption that the field in the $z=\SI{40}{nm}$ plane gives the biggest part in the total enhancement.
+It was the scope of this work to draw a comparison between the local simulated enhancement and the total measured enhancement. The shape of the graphene layer, that was suspended on top of the gold nanodimer, was simulated with a 3D modelling software. The local electromagnetic enhancement was calculated with the finite-difference time-domain method, using the commercial software Lumerical FDTD solutions. By averaging the local electromagnetic enhancement at the graphene layer over the size of the laser spot the total enhancement was calculated.
 
-In the last part the spatial coherence was taken into account which leads to a final enhancement value of $23.0$ which is pretty close to the measured value of $12.8$ in \cite{heeg}.
+\note{Absatz wo du das berechnete local enhancement und total enhancement beschreibst. Hier auch Einfluss der Eckradien beschreiben.} In the last part the spatial coherence was taken into account which leads to a final enhancement value of $23.0$ which is pretty close to the measured value of $12.8$ in \cite{heeg}. The corner radius of the gold structure only has a minor influence on the total enhancement, although it leads to significant changes in the $x,z$-plots of the near-field. 
 
-The corner radius of the gold structure only has a minor influence on the total enhancement, although it leads to significant changes in the $x,z$-plots of the near-field. Further simulations should include even bigger corner radiuses to find an experimental setup that results in the same near-field at the edges of the nanostructure.
+\note{Absatz wo du einen Vergleich zu dem experimentellen Wert in ref 2 ziehst. Dort auch erwähnen, dass besseres Ergebnis mit spatial coherence erzielt wird. }
+
+Further simulations should include even bigger corner radiuses to find an experimental setup that results in the same near-field at the edges of the nanostructure.
