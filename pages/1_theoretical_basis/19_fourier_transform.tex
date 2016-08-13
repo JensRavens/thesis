@@ -7,6 +7,6 @@ While it is often useful to know the exact state of the system at any time step 
   \item[Mixed $\mathbf{E}$ and $\mathbf{H}$ Fields] If the discretisation $\Delta_t$ is not corresponding to the period of the electromagnetic wave there will be a mixture of $\mathbf{E}$ and $\mathbf{H}$ at any given timestep $q$ which is undesired in most cases because only the $\mathbf{E}$ field might be of interest. The same problem arises for the spatial propagation of the wave.
 \end{description}
 
-To solve these problems most implementations of FDTD transform the electric field $\mathbf{E}(\mathbf{x},t)$ with a Fourier transform to $\mathbf{E}(\mathbf{x}, \nu)$ with $\nu$ being the frequency of the electric field. In case only a specific frequency $\nu$ is of interest all other values can already be discarded while the simulation is running which is greatly reducing the memory needed to perform a calculation.
+To solve these problems most implementations of FDTD transform the electric field $\mathbf{E}(\mathbf{x},t)$ with a Fourier transformation to $\mathbf{E}(\mathbf{x}, \nu)$ with $\nu$ being the frequency of the electric field. In case only a specific frequency $\nu$ is of interest all other values can already be discarded while the simulation is running which is greatly reducing the memory needed to perform a calculation.
 
 This also solves the problem of mixed fields: Over many time steps $q$ the calculated $\mathbf{E}$ values will average out the error that would be present by just using a single iteration.

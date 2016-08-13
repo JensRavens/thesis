@@ -1,8 +1,8 @@
-\subsection{Surface Enhanced Raman Spectroscopy with Graphene}
+\subsection{Surface-Enhanced Raman Spectroscopy of Graphene}
 
-Plasmonics explores the interaction of metallic surfaces and light waves that causes density waves of electrons on the surface. The electron density wave propagating on the metal is often referred to as a surface plasmon. In addition to free plasmons localised surface plasmons are created by exciting a nano structure that is smaller than the wavelength $\lambda$ of the light used for the excitation.
+Plasmonics explores the interaction of metallic surfaces and light that causes density waves of electrons called plasmons. The electron density wave propagating on the metal surface is often referred to as a surface plasmon. In addition, localised surface plasmons are created by exciting a nanostructure that is smaller than the wavelength $\lambda$ of the light used for the excitation.
 
-Exciting a localized surface plasmon during Raman processes can increase the intensity of the Raman signal by several orders of magnitude\mcite. This field enhancement is greatest for a resonance between the frequency of the incident light and the frequency of the surface plasmon $\omega_P$. Only the dipolar term of the $\mathbf{E}$ field contributes to the excitation of surface plasmons and therefore in the enhancement of the Raman signal. Because of the influence of the surface plasmons this method is called "Surface Enhanced Raman Spectroscopy".
+Exciting a localized surface plasmon during Raman processes can increase the intensity of the Raman signal by several orders of magnitude\mcite. This field enhancement is strongest for a resonance between the frequency of the incident light and the frequency of the surface plasmon $\omega_P$. Because of the influence of the surface plasmons this method is called "Surface-Enhanced Raman Spectroscopy".
 
 \begin{figure}[!h]
   \centering
@@ -13,19 +13,17 @@ Exciting a localized surface plasmon during Raman processes can increase the int
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{./images/local-enhancement-heeg.png}
   \end{subfigure}
-  \caption{\textbf{(a)} Gold disks are placed with a chrome interlayer on SiO$_2$. A layer of graphene is pulled into the gap. Adapted from \cite{heeg}. \textbf{(b)} Local enhancement at $\lambda = 638nm$ and $z=40nm$. The blue dashed line indicates the area that includes 90\% of the near field intensity according to \cite{heeg}. Copied from \cite{heeg}.}
+  \caption{\textbf{(a)} A gold-nanodisk dimer with a chromium interlayer is fabricated with e-beam lithography on a SiO$_2$/Si substrate. A layer of graphene is suspended on top of the nanostructure and pulled into the gap (figure adapted from ref.~\cite{heeg}). \textbf{(b)} Local $\mathbf{E}$-field enhancement at $\lambda = 638nm$ and a distance to the substrate of \SI{40}{nm}. The blue dashed line indicates the area that includes 90\% of the near field intensity according to \cite{heeg} (figure from ref.~\cite{heeg}.)}
   \label{fig:heeg-experiment}
 \end{figure}
 
-As an example an experiment from \cite{heeg} is shown in figure~\ref{fig:heeg-experiment}. Graphene is put on top of two gold nanostructures with a diameter of \SI{100}{nm} and a distance of \SI{30}{nm}. Localized surface plasmons in the gold structures enhance the Raman signal. The size of the structure is chosen to be in resonance with the laser frequency of $\lambda = 638nm$.
+The experiment relevant for this work is depicted in figure~\ref{fig:heeg-experiment} (for details see ref.~\cite{heeg}). Graphene is suspended on top of two gold disks with a diameter of \SI{100}{nm} and a gap of \SI{30}{nm}. Localized surface plasmons in the gold structures enhance the Raman signal. The near-field intensity enhancement at a distance of \SI{40}{nm} to the substrate is shown in figure~\ref{fig:heeg-experiment}b. The geometry of the nanostructure is chosen to be in resonance with the laser wavelength of $\lambda = \SI{638}{nm}$. Only the component of the electric field that lies within the graphene plane is contributing to the enhancement.
 
-As already noted only the parallel terms of the $\mathbf{E}$-field are contributing to the enhancement which means for graphene that only the component of the electric field that lies within the graphene plane is contributing to the enhancement.
+\subsubsection{Electromagnetic-Enhancement Theory of SERS}
 
-\subsubsection{Electromagnetic Enhancement Theory of SERS}
-
-The effect of the localized surface plasmons actually happens twice: When the incident photons scatter with phonons and excite Raman modes and a second time for the Raman signal. Each enhancement leads to an $|\mathbf{E}|^2/E_0^2$ enhancement, both effects to a total enhancement proportional to $|\mathbf{E}|^4$ as stated in
-
+The effect of electromagnetic field enhancement actually happens twice in surface-enhanced Raman spectroscopy (SERS): The incoming- and the Raman-scattered light are both enhanced by an interaction with the localized surface plasmon. The local electromagnetic enhancement at position $\mathbf{r}$ and laser frequency $\omega_\mathrm{L}$ can be calculated as
 \begin{equation}
-  Enh_{local}(\mathbf{r},\omega_L)=\frac{\left|\mathbf{E}_{loc}(\mathbf{r}, \omega_L)\right|^2}{\left|\mathbf{E}_0\right|^2}\frac{\left|\mathbf{E}_{loc}(\mathbf{r}, \omega_L-\omega_{ph})\right|^2}{\left|\mathbf{E}_0\right|^2}\approx\frac{\left|\mathbf{E}_{loc}(\mathbf{r})\right|^4}{\left|\mathbf{E}_0\right|^4}.
+  Enh_\mathrm{loc}(\mathbf{r},\omega_L)=\frac{\left|\mathbf{E}_\mathrm{loc}(\mathbf{r}, \omega_L)\right|^2}{\left|\mathbf{E}_0\right|^2}\frac{\left|\mathbf{E}_\mathrm{loc}(\mathbf{r}, \omega_L-\omega_\mathrm{ph})\right|^2}{\left|\mathbf{E}_0\right|^2}\approx\frac{\left|\mathbf{E}_\mathrm{loc}(\mathbf{r}, \omega_L)\right|^4}{\left|\mathbf{E}_0\right|^4},
   \label{eq:enhancement}
 \end{equation}
+where $\mathbf{E}_\mathrm{loc}$ is the local electric field amplitude, $\mathbf{E}_0$ the electric field amplitude of the reference signal and $\omega_\mathrm{ph}$ the phonon frequency. For a Raman shift that is small compared to the laser frequency, the enhancement is proportional to $\mathbf{E}^4$.

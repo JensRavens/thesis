@@ -3,6 +3,9 @@
 Graphene is a two dimensional hexagonal atomic structure (also called honeycomb structure) made of carbon atoms. After its discovery in 2004\cite{novoselov}, graphene has sparked increasing interest among scientists due to its extraordinary mechanical\mcite, optical\mcite and electrical\mcite properties. This includes being a semiconductor without a band gap\mcite, high carrier mobility\mcite and an enormous intrinsic tensile strength\mcite.
 
 \subsubsection{Graphene Lattice}
+
+Graphene is a two dimensional allotrope of carbon where atoms are densely packed in a hexagonal pattern with a distance of about \SI{1.42}{\angstrom} as shown in figure~\ref{fig:spm}. Each sp$^2$-hybridized carbon atom has a covalent $\sigma$-bond to three other carbon atoms formed from three of the valence electrons while the 4th valence electron does not participate in the covalent bonding but forms a conduction $\pi$-band.
+
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.7\textwidth]{./images/graphene-spm.png}
@@ -10,7 +13,7 @@ Graphene is a two dimensional hexagonal atomic structure (also called honeycomb 
   \label{fig:spm}
 \end{figure}
 
-Graphene is a two dimensional allotrope of carbon where atoms are densely packed in a hexagonal pattern with a distance of about \SI{1.42}{\angstrom} as shown in figure~\ref{fig:spm}. Each sp$^2$-hybridized carbon atom has a covalent $\sigma$-bond to three other carbon atoms formed from three of the valence electrons while the 4th valence electron does not participate in the covalent bonding but forms a conduction $\pi$-band.
+As seen in figure~\ref{fig:lattice}a graphene's lattice consists of a two-atom triangular Bravais lattice which is spanned by the two basis vectors $\mathbf{a}_1$ and $\mathbf{a}_2$. For solid state physics it is often interesting to look at the corresponding lattice in $k$-space. Graphene's reciprocal lattice is also hexagonal with a hexagonal unit cell with $\Gamma$ as its center (as seen in figure~\ref{fig:lattice}b). Other symmetric points are $K_+$ and $K_-$ at the corners of the first Brillouin zone. In addition to them there is the $M$ point describing the center between $K_+$ and $K_-$.
 
 \begin{figure}[!h]
   \centering
@@ -21,22 +24,20 @@ Graphene is a two dimensional allotrope of carbon where atoms are densely packed
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{./images/k-cell.png}
   \end{subfigure}
-  \caption{\textbf{(a)} The basis vectors $\mathbf{a}_1$ and $\mathbf{a}_2$ build a triangular Bravais lattice with a two atom-basis. The Wigner-Seitz cell is shaded in gray (adapted from \mcite). \textbf{(b)} The reciprocal lattice points to the hexagonal grid of the two atom base grid. The unit cell is shaded in gray, $\Gamma$ is the cell's center; $K_+$, $K_-$ and $M$ are highly symmetric points (adapted from \mcite). \note{add labels}}
+  \caption{\textbf{(a)} The basis vectors $\mathbf{a}_1$ and $\mathbf{a}_2$ build a triangular Bravais lattice with a two atom basis. The Wigner-Seitz cell is shaded in gray (adapted from \mcite). \textbf{(b)} The reciprocal lattice with the unit cell shaded in gray. $\Gamma$ is the cell's center; $K_+$, $K_-$ and $M$ are high-symmetry points (adapted from \mcite). \note{add labels}}
   \label{fig:lattice}
 \end{figure}
-
-As seen in figure~\ref{fig:lattice} graphene's lattice consists of a two-atom triangular Bravais lattice which is spanned by the two basis vectors $\mathbf{a}_1$ and $\mathbf{a}_2$. For solid state physics it is often interesting to look at the transformed grid in $k$-space. Graphene's reciprocal lattice is also hexagonal with a hexagonal unit cell with $\Gamma$ as its center. Other symmetric points are $K_+$ and $K_-$ at the corners of the first Brillouin zone. In addition to them there is the $M$ point describing the center between $K_+$ and $K_-$.
 
 \newpage
 
 \subsubsection{Electronic Properties}
 
-Most of graphene's special electronic properties are caused by the fourth valence electron which causes the $\pi$ orbitals to hybridize and form a delocalized electron cloud above and below the graphene lattice enabling ballistic transport of electrons\mcite and a high carrier mobility\mcite. These orbitals can be seen in figure~\ref{fig:orbitals}.
+Most of graphene's special electronic properties are caused by the fourth valence electron which causes the $\pi$ orbitals to hybridize and form a delocalized electron cloud above and below the graphene lattice enabling ballistic transport of electrons\mcite and a high carrier mobility\mcite. These orbitals are depicted in figure~\ref{fig:orbitals}.
 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.3\textwidth]{./images/orbitals.jpg}
-  \caption{Valence orbitals of carbon atoms in graphene. Covalent bonded atoms are formed from $\sigma$-orbitals while the perpendicular $\pi$-orbitals create the valence and conduction band. Adapted from http://www.andrew.cmu.edu/user/feenstra/graphene/\mcite.}
+  \caption{Valence orbitals of carbon atoms in graphene. Covalent bonds are formed from $\sigma$-orbitals while the perpendicular $\pi$-orbitals create the valence and conduction band. Adapted from http://www.andrew.cmu.edu/user/feenstra/graphene/\mcite. \note{redraw pixeled labels}}
   \label{fig:orbitals}
 \end{figure}
 
@@ -47,22 +48,14 @@ Due to the symmetry of the system the $\pi$ orbitals can be treated independentl
   \label{eq:dispersion}
 \end{equation}
 
-with the hopping energy $\gamma_0\approx\SI{2.8}{eV}$, the lattice constant $a\approx\SI{2.46}{Å}$, "$+$" for the conduction band and "$-$" for the valence band.
+with the hopping energy $\gamma_0\approx\SI{2.8}{eV}$\mcite, the lattice constant $a\approx\SI{2.46}{Å}$, "$+$" for the conduction band and "$-$" for the valence band.
 
-Plotting this relation leads to figure~\ref{fig:bands} which shows that valence and conduction band touch in the $K$-points. Looking a bit closer at the band structure near the $K$ points in figure~\ref{fig:bands} allows to use a linear approximation of the valence and conduction band. Both bands touch in a single point at the intersection.
+A plot of the band structure in figure~\ref{fig:bands} shows that valence and conduction band touch in the $K$-points. Looking a bit closer at the band structure near the $K$ points in figure~\ref{fig:bands} allows to use a linear approximation of the valence and conduction band. Both bands touch in a single point at the intersection.
 
 \begin{figure}[!h]
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
-    \caption{}
-    \includegraphics[width=\textwidth]{./images/band-2d.png}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[b]{0.4\textwidth}
-    \caption{}
-    \includegraphics[width=\textwidth]{./images/dispersion.png}
-  \end{subfigure}
-  \caption { (a): Conduction and valence band touch in the points $K\_-$ and $K\_+$.\mcite (b): At the K points the conduction and valance bands can be linearly approximated.\mcite }
+  \includegraphics[width=0.8\textwidth]{./images/dispersion.png}
+  \caption { Conduction and valence band touch in the points $K_-$ and $K_+$. At these points the conduction and valence bands can be linearly approximated.\mcite }
   \label{fig:bands}
 \end{figure}
 
@@ -76,4 +69,4 @@ confirming that conduction and valence band touch in the K points and therefore 
 
 \subsubsection{Other Properties}
 
-Other interesting properties of graphene often exceed those of any other material. It has an intrinsic tensile strength of 130 GPa and a Young's modulus as high as 1TPa\mcite. Also it's impermeable to gases\mcite and has a light absorption of exactly $\pi\alpha$\mcite.
+Other interesting properties of graphene often exceed those of any other material. It has an intrinsic tensile strength of 130 GPa and a Young's modulus as high as 1TPa\mcite. It is also impermeable to gases\mcite and absorbs light by a factor of $\pi\alpha$\mcite, where $\alpha$ is the fine structure constant.
