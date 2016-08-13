@@ -2,7 +2,9 @@
 \section{Calculations for Graphene}
 \label{sec:calculations}
 
-Placed over the nanostructure described in figure \ref{fig:lumerical} there is a layer of graphene under tensile strain. This layer is sucked into the cavity for about \SI{5}{nm} according to \cite{heeg}. To get a realistic estimation about the location of the graphene layer a 3D modelling software with cloth simulation will be used.
+\note{The aim of this section is...}
+
+A layer of graphene is suspended on the nanostructure depicted in figure \ref{fig:heeg-experiment}. The graphene layer is pulled into the cavity by about \SI{5}{nm} according to ref.~\cite{heeg}. To get a realistic estimation of the location of the graphene layer a 3D modelling software with cloth simulation will be used.
 
 \subsection{Simulating the layer of graphene}
 
@@ -19,11 +21,11 @@ Placed over the nanostructure described in figure \ref{fig:lumerical} there is a
   \label{fig:blender}
 \end{figure}
 
-Using the 3D modelling software Blender 2.7 a simulation of cloth falling on 2 cylinders is used as a basis for the location of the graphene layer. As visible in figure \ref{fig:blender} two cylinders of \SI{45}{nm} height and \SI{50}{nm} radius (gold nanostructures plus chrome interlayer) are placed on an infinite plane. Next up a 1nm thick plane is placed on top and cloth simulation is enabled for this layer.
+Using the 3D modelling software Blender 2.7 a simulation of cloth falling on two cylinders was used to approximate the location of the graphene layer. As visible in figure \ref{fig:blender} two cylinders of \SI{45}{nm} height and \SI{50}{nm} radius (gold nanostructures plus chrome interlayer) were placed on an infinite plane. Next up a 1nm thick plane was placed on top and cloth simulation was enabled for this layer.
 
-After the simulation has finished with the cloth like material the results are compared to figure 1c of \cite{heeg}. This is repeated with tweeked properties of the material until the simulated 3D model matches estimated position of the graphene layer. Because no material caused the layer to be sucked into the cavity the manual sculpturing tool is used to move the layer down into the cavity. The resulting 3D model is shown in figure \ref{fig:blender}.
+After the simulation finished with the cloth like material the results were compared to figure 1c of ref.~\cite{heeg}. This was repeated with tweeked properties of the material until the simulated 3D model matches the estimated position of the graphene layer. Because no material caused the layer to be pulled into the cavity the manual sculpturing tool was used to move the layer down into the cavity. The resulting 3D model is shown in figure \ref{fig:blender}.
 
-To import the simulated structure into Matlab for further calculations an intermediate step is used. A camera in the scene is setup to point down at the structure with a special light source that illuminates the simulated layer according to it's $z$ value. The highest value is represented as white while black represents the base plane. All other values are projected linearly in the gray colorspace, effectively creating the heightmap shown in \ref{fig:blender}.
+To import the simulated structure into Matlab for further calculations an intermediate step is used. A camera is setup in the scene to point down at the structure with a special light source that illuminates the simulated layer according to it's $z$ value. The highest value is represented as white while black represents the base plane. All other values are projected linearly in the gray colorspace, effectively creating the heightmap shown in \ref{fig:blender}.
 
 This heightmap can now be imported as a two dimensional matrix of height values:
 \begin{minted}{matlab}
@@ -49,6 +51,7 @@ This heightmap can now be imported as a two dimensional matrix of height values:
   end
 \end{minted}
 
-This imports an image, converts it to grayscale if needed, normalizes the values to be between 0 and 1 and then scales the heightmap with a factor. For this to work the image has to have the same resolution as the simulation (401 datapoints in the $x$ and $y$-axis for this case).
+This Matlab code imports an image, converts it to grayscale if needed, normalizes the values to be between 0 and 1 and then scales the heightmap with a factor. For a connection to the simulated near-field, the image has to have the same resolution as the simulation (401 datapoints in the $x$- and $y$ axis for this case).
 
-This calculation is using a scale factor of $47$ so the graphene layer is hovering \SI{2}{nm} above the gold structure. This is done to mitigate the lightning effects at the discretised surface of the nano structure.
+\note{(Mir ist unklar was du damit meinst? Die Dimensionen in Blender und Lumerical waren doch gleich gewählt?)}
+The calculation is using a scale factor of $47$ so that the graphene layer is hovering \SI{2}{nm} above the gold structure. This is done to mitigate the lightning effects at the discretised surface of the nanostructure.

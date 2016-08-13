@@ -1,6 +1,6 @@
 \subsection{Calculating the total enhancement}
 
-To get the total enhancement in the square simulated area equation \ref{eq:enhancement} can be used. The measured enhancement of this area will be the mean of the values within the slice.
+To get the total enhancement in the square simulated area (see figure~\ref{fig:symmetry}) the $\mathbf{|E|}^4$ approximation in equation \ref{eq:enhancement} was used. The measured enhancement of this area is the mean of the values within the slice.
 
 \begin{figure}[!h]
   \centering
@@ -9,19 +9,19 @@ To get the total enhancement in the square simulated area equation \ref{eq:enhan
   \label{fig:symmetry}
 \end{figure}
 
-This average value leads to $60.2$ for the \SI{2}{nm} corner size, $60.2$ for the \SI{5}{nm} corner size (both in the plane of graphene) and $59.2$ for the \SI{5}{nm} corner size for a planar slize at $z=\SI{40}{nm}$. The similarity between these values already shows that the estimation of \cite{heeg} to use the $z=\SI{40}{nm}$ plane is pretty good.
+The average value is $60.2$ for the \SI{2}{nm} corner size, $60.2$ for the \SI{5}{nm} corner size (both in the plane of graphene) and $59.2$ for the \SI{5}{nm} corner size for a planar slize at $z=\SI{40}{nm}$. The similarity between these values shows that the estimation of ref.~\cite{heeg} to use the $z=\SI{40}{nm}$ plane is surprisingly accurate.
 
-There is one last factor be taken into account: The used laser with a fwhm of \SI{570}{nm} can be estimated with a circle of radius \SI{285}{nm}. This circle has an area of \SI{255 180}{nm^2} which leads compared with the simulated area of \SI{160 000}{nm^2} to $62.7\%$ contribution of the simulated area to the total enhancement as seen in figure \ref{fig:symmetry}.
+There is one last factor be taken into account: The used laser spot with a fwhm of \SI{570}{nm} can be estimated by a circle of radius \SI{285}{nm}. The simulated area of \SI{160 000}{nm^2} just accounts for $62.7\%$ of the area of the laser spot. As the Raman signal arises from the area of the entire laser spot, the calculated total enhancement decreases when accounting for this area (see figure~\ref{fig:symmetry}).
 
 The area around the simulated area is approximated as the mean of the outer points of the simulated area.
 
-Taking the laser geometry into account the resulting enhancements are $38.1$ for the \SI{2}{nm} corner size, $37.8$ for the \SI{5}{nm} corner size (both in the plane of graphene) and $37.2$ for the \SI{5}{nm} corner size for a planar slize at $z=\SI{40}{nm}$
+Taking the laser geometry into account the resulting enhancement values are $38.1$ for the \SI{2}{nm} corner radius, $37.8$ for the \SI{5}{nm} corner radius (both in the plane of graphene) and $37.2$ for the \SI{5}{nm} corner radius for a planar slice at $z=\SI{40}{nm}$ \note{Hier schon einen Vergleich zu der exp. Verstärkung in ref. [2] ziehen.}
 
 \subsection{Spatial coherence in near-field Raman scattering}
 
-While classically Raman scattering is treated as a spatially incoherent process which means that spatially distinct locations are considered as uncorrelated and the scattered signal is proportional to the scatterers volume. A recent publication has proven that at nanoscale this assumption does not hold and there is a correlation length of about \SI{30}{nm} for Raman scattering in graphene \cite{coherence}.
+Classical Raman scattering is treated as a spatially incoherent process which means that spatially distinct locations are considered to be uncorrelated and the scattered signal is proportional to the scattering volume. A recent publication suggested that at the nanoscale this assumption does not hold and there is a correlation length of about \SI{30}{nm} for Raman scattering in graphene \cite{coherence}.
 
-To account for this effect the outgoing enhancement has to be adapted. The easiest approximation is to take the mean of a radius of \SI{30}{nm} around each point instead of the point's value directly, effectively blurring the slice as shown in figure~\ref{fig:coherence}.
+To account for this effect the outgoing enhancement has to be adapted. The easiest approximation is to take the mean of a radius of \SI{30}{nm} around each point instead of the point's value directly, effectively blurring the slice as shown in figure~\ref{fig:coherence}. \note{Besser ein bisschen ausführlicher beschreiben, mit der Formel die ich dir aufgeschrieben habe.}
 
 \begin{figure}[!h]
   \centering
@@ -30,4 +30,4 @@ To account for this effect the outgoing enhancement has to be adapted. The easie
   \label{fig:coherence}
 \end{figure}
 
-Taking this approximation into account for the \SI{40}{nm} slice the total enhancement decreases to $23.0$.
+Taking this approximation into account for the \SI{40}{nm} slice the total enhancement decreases from $37.2$ to $23.0$. \note{compare with heeg}
