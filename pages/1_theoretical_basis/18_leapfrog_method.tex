@@ -34,6 +34,7 @@ To account for different materials within the system, $\mu$ can be replaced by a
   \centering
   \includegraphics[width=0.8\textwidth]{./images/yeecell.jpg}
   \caption{To visualize the different points that are calculated during the process for three dimensions there is the so called Yee Cell that is formed by taking the points for $\mathbf{E}$ at $q=0$ and $\mathbf{H}$ at $q=\frac{1}{2}$. Each value for $\mathbf{H}$ can be calculated by its surrounding values of $\mathbf{E}$ at the time step $q-\frac{1}{2}$.}
+  \label{fig:yeecell}
 \end{figure}
 
-\note{add paragraph about step to 3D and yee cell}
+Analogous to the calculation done in one dimension, the same algorithm can be applied to three dimensional space to obtain $\mathbf{E}(\mathbf{r}, t)$ and $\mathbf{H}(\mathbf{r}, t)$. By using the points $E_x$, $E_y$ and $E_z$ with the corresponding points $H_x$, $H_y$ and $H_y$ a base cell for a grid is formed. This cell is called "Yell Cell" and can be seen in a bigger lattice in figure~\ref{fig:yeecell}.
