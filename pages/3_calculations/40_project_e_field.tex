@@ -25,11 +25,19 @@ Now that the position of graphene is known for every point in the $xy$ plane the
   graphene_slice = slice(data, obj.x, obj.y);
 \end{minted}
 
-The returned slice now is just a regular slice which can be plotted as seen in figure \ref{fig:projected}.
+The returned slice now is just a regular slice which can be plotted as seen in figure \ref{fig:projected}a.
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[width=\textwidth]{./images/graphene-layer.png}
-  \caption{Near field enhancement $|E/E_0|^2$ in the layer of graphene after applying the height map. \note{add pic of 40nm slice for reference}}
+  \begin{subfigure}[t]{0.48\textwidth}
+    \caption{}
+    \includegraphics[width=\textwidth]{./images/graphene-layer.png}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[t]{0.48\textwidth}
+    \caption{}
+    \includegraphics[width=\textwidth]{./images/40nm-2nm.png}
+  \end{subfigure}
+  \caption{\textbf{(a)} Near field enhancement $|E/E_0|^2$ in the layer of graphene after applying the height map. \textbf{(b)} Near field enhancement of a planar slice at a height of $z=\SI{40}{nm}$ for comparision.}
   \label{fig:projected}
 \end{figure}

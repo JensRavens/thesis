@@ -15,13 +15,19 @@ There is one last factor be taken into account: The used laser spot with a fwhm 
 
 The area around the simulated area is approximated as the mean of the outer points of the simulated area.
 
-Taking the laser geometry into account the resulting enhancement values are $38.1$ for the \SI{2}{nm} corner radius, $37.8$ for the \SI{5}{nm} corner radius (both in the plane of graphene) and $37.2$ for the \SI{5}{nm} corner radius for a planar slice at $z=\SI{40}{nm}$ \note{Hier schon einen Vergleich zu der exp. Verstärkung in ref. [2] ziehen.}
+Taking the laser geometry into account the resulting enhancement values are $38.1$ for the \SI{2}{nm} corner radius, $37.8$ for the \SI{5}{nm} corner radius (both in the plane of graphene) and $37.2$ for the \SI{5}{nm} corner radius for a planar slice at $z=\SI{40}{nm}$. This confirms the exponential enhancement as a function of the calculated near field intensity within the cavity depicted in ref.~\cite{heeg}.
 
 \subsection{Spatial coherence in near-field Raman scattering}
 
 Classical Raman scattering is treated as a spatially incoherent process which means that spatially distinct locations are considered to be uncorrelated and the scattered signal is proportional to the scattering volume. A recent publication suggested that at the nanoscale this assumption does not hold and there is a correlation length of about \SI{30}{nm} for Raman scattering in graphene \cite{coherence}.
 
-To account for this effect the outgoing enhancement has to be adapted. The easiest approximation is to take the mean of a radius of \SI{30}{nm} around each point instead of the point's value directly, effectively blurring the slice as shown in figure~\ref{fig:coherence}. \note{Besser ein bisschen ausführlicher beschreiben, mit der Formel die ich dir aufgeschrieben habe.}
+To account for this effect the outgoing enhancement has to be adapted. The easiest approximation is to take the mean of a radius of \SI{30}{nm} around each point instead of the point's value directly for the outgoing enhancement, effectively blurring the slice as shown in figure~\ref{fig:coherence}. From the incoming and outgoing enhancement, the total enhancement can be calculated as\cite{maier2007}
+
+\begin{equation}
+  Enh_\mathrm{loc}(\mathbf{r},\omega_L)=\frac{\left|\mathbf{E}_\mathrm{loc}(\mathbf{r}, \omega_L)\right|^2}{\left|\mathbf{E}_0\right|^2}\frac{\left|\mathbf{E}_\mathrm{loc}(\mathbf{r}, \omega_L-\omega_\mathrm{ph})\right|^2}{\left|\mathbf{E}_0\right|^2}.
+\end{equation}
+
+Taking this approximation into account for the \SI{40}{nm} slice the total enhancement decreases from $37.2$ to $23.0$ which almost matching the measured value of $12.8$ from ref.~\cite{heeg}.
 
 \begin{figure}[!h]
   \centering
@@ -29,5 +35,3 @@ To account for this effect the outgoing enhancement has to be adapted. The easie
   \caption{Outgoing local enhancement for a $z=\SI{40}{nm}$ slice. Due to the spatial coherence effect in near-field Raman scattering the outgoing enhancement is effectivly blurred with a radius of \SI{30}{nm} which decreases the total enhancement.}
   \label{fig:coherence}
 \end{figure}
-
-Taking this approximation into account for the \SI{40}{nm} slice the total enhancement decreases from $37.2$ to $23.0$. \note{compare with heeg}

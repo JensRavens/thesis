@@ -1,5 +1,6 @@
 \newpage
 \section{Setup and Simulation}
+\label{sec:simulation}
 \subsection{Simulation using Lumerical FDTD}
 
 The following simulation and calculation is aimed to reproduce the results of ref.~\cite{heeg} and is supposed to lead to a more accurate relation between local electromagnetic enhancement and total measured enhancement.
@@ -18,18 +19,12 @@ The corner radius of the gold cylinders was not mentioned in ref.~\cite{heeg} Th
 
 By default the boundaries of an FDTD simulation are reflecting all magnetic and electric fields. In the experiment we observe a substrate surface that can be approximated as infinite compared to the length scale of the gold structure. To account for this the electric field leaving the simulated area is absorbed by a Perfectly Matched Layer (PML).
 
-To save time during the FDTD simulation the mirror symmetry along the $x$ and $y$ axis is used. This reduces the required memory and time of the simulation by a factor of $\frac{3}{4}$ \note{(damit meine ich: nur ein viertel der eigentlichen ressourcen wird benötigt. passt das so?)}, leading to a significant improvement in iteration speed. Only the left bottom quarter of the experiment is simulated (see figure \ref{fig:lumerical}).
+To save time during the FDTD simulation the mirror symmetry along the $x$ and $y$ axis is used. This reduces the required memory and time of the simulation by a factor of $\frac{3}{4}$ \question{(damit meine ich: nur ein viertel der eigentlichen ressourcen wird benötigt. passt das so?)}, leading to a significant improvement in iteration speed. Only the left bottom quarter of the experiment is simulated (see figure \ref{fig:lumerical}).
 
-The grid size within the simulated area is set to a uniform equidistant grid with a mesh size of \SI{0.5}{nm} between the simulated points in $x$, $y$ and $z$ direction. The total simulated area on the bottom left is a square of \SI{200}{nm}, leading to a total calculateable square of \SI{400}{nm} after mirroring the simulated results. \note{Die PML Layer sind viel weiter weg. Das solltest du noch schreiben. Außerdem wurde adaptive-meshing verwendet und nur im Simulationsbereich so fein diskretisiert.}
+The grid size within the recorded area is set to a uniform equidistant grid with an adaptive refined mesh size of \SI{0.5}{nm} (in comparision to the overall system mesh size of \SI{2}{nm}) between the simulated points in $x$, $y$ and $z$ direction. The total recorded area on the bottom left is a square of \SI{200}{nm}, leading to a total calculateable square of \SI{400}{nm} after mirroring the simulated results. Outside of the \SI{200}{nm} square the simulation continues for \SI{200}{nm} until reaching the PML layers.
 
-The simulated light pulse is a femto second pulse with a wavelength of $\lambda=\SI{638}{nm}$, matching the resonance of the plasmonic antennas \cite{heeg}.
+The simulated light pulse is a femto second pulse with a wavelength of $\lambda=\SI{638}{nm}$, matching the resonance of the plasmonic antennas\cite{heeg}.
 
 Simulating the described system took about 8 hours on the used machine and led to a file size of \SI{1.24}{GB} simulated data per simulation. This simulation was done for both a \SI{2}{nm} and a \SI{5}{nm} corner radius. Unless otherwise noted the following sections will use data from the \SI{2}{nm} simulation.
 
-For an evaluation, the simulated data is exported to Matlab, including the three dimensional electric field (as complex values) and the three axes \note{Lumerical verwendet hier ein Rohdatenformat, die Skalierung, wo welche Achse liegt, wird separat gespeichert (und muss auch extra exportiert werden)}.
-
-\begin{figure}[!h]
-  \includegraphics[width=\textwidth]{./images/simulation-slices.png}
-  \caption{Slices of the simulation results in the $x y$-plane showing the near field enhancement $|E/E_0|^2$. Starting at the top left at $z=\SI{0}{nm}$ continuing in \SI{5}{nm} steps until $z=\SI{80}{nm}$. \note{Hier wäre eine Plotlegende hilfreich, die zeigt welche Farbe welcher Verstärkung entspricht. So wie in Fig. 13. Am besten auch noch die weißen Linien um die einzelnen Plots dicker machen.  Abbildung sollte später erscheinen.}}
-  \label{fig:slices}
-\end{figure}
+For an evaluation, the simulated data is exported to Matlab, including the three dimensional electric field (as complex values) and the three axes \question{Lumerical verwendet hier ein Rohdatenformat, die Skalierung, wo welche Achse liegt, wird separat gespeichert (und muss auch extra exportiert werden). muss ich das detaillierter beschreiben?}.
