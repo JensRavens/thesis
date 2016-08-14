@@ -22,13 +22,13 @@ Likewise these calculations can be done for $E_z$ to get an update function to c
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.5\textwidth]{./images/space-time-cell.png}
-  \caption{Each value of $\mathbf{E}$ at a specific time can be calculated by the former value at the same position in space one time step before and the surrounding values of $\mathbf{H}$ half a timestep before. Following this algorithm the diagram is built from bottom to top line by line which is the reason this method is called leapfrog method.}
+  \caption{Each value of $\mathbf{E}$ at a specific time can be calculated by the former value at the same position in space one time step before and the surrounding values of $\mathbf{H}$ half a timestep before. Following this algorithm the diagram is built from bottom to top line by line which is the reason this method is called leap frog method.}
   \label{fig:leapfrog}
 \end{figure}
 
 To get the electric field of any given system at a specific time this algorithm calculates $E_z$ and $H_y$ with $q$ starting at 0 and increasing by $\frac{1}{2}$ until the required time $t = q\Delta_t$ is reached, as schematically shown in figure~\ref{fig:leapfrog}. The only required input is the initial field of $E_z$ at $q = 0$. Because this method calculates $E$ and $H$ in turns it is also called the "leap frog method".
 
-To account for different materials within the system, $\mu$ can be replaced by a location or even time dependent $\mu(t, x)$.
+To account for different materials within the system, $\varepsilon$ can be replaced by a location or even time dependent $\varepsilon(t, x)$.
 
 \begin{figure}[!h]
   \centering

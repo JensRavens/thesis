@@ -2,11 +2,13 @@ In figure~\ref{fig:slice-comparision}, a slice at $z=\SI{40}{nm}$ is compared to
 
 \begin{figure}[!h]
   \centering
-  \begin{subfigure}{0.50\textwidth}
+  \begin{subfigure}[t]{0.50\textwidth}
+    \caption{}
     \includegraphics[width=\textwidth]{./images/40nm.png}
   \end{subfigure}
   ~
-  \begin{subfigure}{0.40\textwidth}
+  \begin{subfigure}[t]{0.40\textwidth}
+    \caption{}
     \includegraphics[width=\textwidth]{./images/local-enhancement-heeg.png}
   \end{subfigure}
   \caption{\textbf{(a)} Near field enhancement $|E/E_0|^2$ in the $xy$-plane at a height of $z=\SI{40}{nm}$. \textbf{(b)} Simulation from ref.~\cite{heeg}.}
@@ -24,8 +26,8 @@ This difference is also noticeable by plotting the near field enhancement at $z 
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{./images/heeg-y-line.png}
   \end{subfigure}
-  \caption{\textbf{(a)} Near field enhancement $|E/E_0|^2$ at $z = \SI{40}{nm}, y = \SI{0}{nm}$ as a function of $x$. \textbf{(b)} Original results by \cite{heeg}.}
+  \caption{\textbf{(a)} Near field enhancement $|E/E_0|^2$ at $z = \SI{40}{nm}, y = \SI{0}{nm}$ as a function of $x$. \textbf{(b)} Original results from ref.~\cite{heeg}.}
   \label{fig:yline}
 \end{figure}
 
-These differences can be explained with the different corner radii where sharper edges lead to a stronger enhancement. However, because the  enhancement outside the cavity can be neglected compared to the enhancement within the cavity according to \cite{heeg}, the results of the simulation overall reproduce the original paper's simulation.
+These differences can be explained with the different corner radii where sharper edges lead to a stronger enhancement. However, because the  enhancement outside the cavity can be neglected compared to the enhancement within the cavity according to ref.~\cite{heeg}, the results of the simulation overall reproduce the original paper's simulation.

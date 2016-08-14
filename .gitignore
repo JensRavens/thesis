@@ -45,3 +45,5 @@ build/
 /thesis.aux
 /thesis.toc
 /_minted-thesis
+/thesis.run.xml
+/thesis.bcf

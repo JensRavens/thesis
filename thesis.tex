@@ -12,6 +12,9 @@
 \usepackage{siunitx}
 \usepackage{minted}
 \usepackage[default,osfigures,scale=0.95]{opensans}
+\usepackage[doi=false,url=false]{biblatex}
+
+\bibliography{bibliography}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand{\mcite}{{\color{red}[missing citation]}}
@@ -44,9 +47,9 @@
 \setcounter{page}{1}
 \input{./pages/_all.tex}
 
-\newpage
-\bibliographystyle{unsrtdin}
-\bibliography{bibliography}
+\emptypage
+\printbibliography
+
 
 \emptypage
 \thispagestyle{empty}
