@@ -20,10 +20,14 @@ end
 
 desc "compiles the files to finished html"
 task compile: [:update] do
-  `pdflatex thesis.tex`
+  puts "creating metadata"
+  `pdflatex --shell-escape thesis.tex`
+  puts "collecting bibliography"
   `bibtex thesis`
-  `pdflatex thesis.tex`
-  `pdflatex thesis.tex`
+  puts "generating page overview"
+  `pdflatex --shell-escape thesis.tex`
+  puts "typesetting document"
+  `pdflatex --shell-escape thesis.tex`
 end
 
 task default: [:compile]
