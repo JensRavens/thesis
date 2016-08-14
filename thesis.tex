@@ -1,7 +1,7 @@
 \documentclass[pdftex,a4paper]{article}
 \usepackage[pdftex]{graphicx}
 \usepackage[utf8]{inputenc}
-\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm, twoside]{geometry}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
@@ -17,21 +17,25 @@
 \newcommand{\mcite}{{\color{red}[missing citation]}}
 \newcommand{\note}[1]{{\color{orange}\bf #1}}
 \newcommand{\question}[1]{{\color{teal}\bf #1}}
+\newcommand{\emptypage}{\newpage\null\thispagestyle{empty}\newpage}
 
 \setlength{\parskip}{1.5em}
 \setlength{\parindent}{0em}
 
 \captionsetup[subfigure]{position=top, labelfont=bf,textfont=normalfont,singlelinecheck=off,justification=raggedright}
 
+\fancyfoot[LE,RO]{\thepage}
+\cfoot{}
+
 \begin{document}
 \input{./pages/0_frontmatter/_title.tex}
+\emptypage
 \thispagestyle{empty}
 \input{./pages/0_frontmatter/_abstract.tex}
-
-\newpage
+\emptypage
 \thispagestyle{empty}
 \tableofcontents
-\newpage
+\emptypage
 \pagestyle{fancy}
 
 \setcounter{page}{1}
@@ -41,10 +45,10 @@
 \bibliographystyle{unsrtdin}
 \bibliography{bibliography}
 
-\newpage
-
-\section*{Acknowledgements}
+\emptypage
 \thispagestyle{empty}
+\input{./pages/0_frontmatter/_acknowledgements.tex}
+
 
 \clearpage
 
